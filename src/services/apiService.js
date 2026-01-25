@@ -204,7 +204,6 @@ export const alertApi = {
   )
 };
 
-<<<<<<< HEAD
 // Department Usage API functions
 export const departmentUsageApi = {
   // Get department daily usage for a specific date
@@ -388,8 +387,6 @@ export const employeeUsageApi = {
   }
 };
 
-=======
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
 // Resource API functions
 export const resourceApi = {
   // Get all resources
@@ -440,13 +437,10 @@ export const api = {
   budgets: budgetApi,
   alerts: alertApi,
   resources: resourceApi,
-<<<<<<< HEAD
   activity: activityApi,
   departmentUsage: departmentUsageApi,
-  employeeUsage: employeeUsageApi
-=======
+  employeeUsage: employeeUsageApi,
   activity: activityApi
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
 };
 
 export default api;

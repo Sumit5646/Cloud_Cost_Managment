@@ -1,28 +1,18 @@
-<<<<<<< HEAD
 // CloudDashboard.jsx - Admin Dashboard with cloud cost tracking
-=======
 // CloudDashboard.jsx - Admin Dashboard with full CRUD operations using Axios
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Sun, Moon, XCircle, CheckCircle, Edit, Save, Plus, TrendingUp, TrendingDown, AlertTriangle, Users, Filter } from "lucide-react";
 import {
-<<<<<<< HEAD
-  AreaChart, Area, CartesianGrid, Tooltip, XAxis, ResponsiveContainer, BarChart, Bar, YAxis, Legend
-=======
-  AreaChart, Area, CartesianGrid, Tooltip, XAxis, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, BarChart, Bar, YAxis
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+  AreaChart, Area, CartesianGrid, Tooltip, XAxis, ResponsiveContainer, BarChart, Bar, YAxis, Legend, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar
 } from "recharts";
 
 // Import components and hooks
 import Sidebar from '../components/Sidebar';
 import { useAuth } from "../context/AuthContext";
 import RoleBasedUI, { useRoleAccess } from "../components/RoleBasedUI";
-<<<<<<< HEAD
 import { departmentUsageApi, employeeUsageApi } from "../services/apiService";
-=======
 import { dashboardApi, userApi, departmentApi } from "../services/apiService";
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
 
 // StatCard Component
 const StatCard = ({ label, value, change, green, darkMode, icon }) => (
@@ -64,19 +54,15 @@ const CloudDashboard = () => {
 
   // State management
   const [selectedSection, setSelectedSection] = useState("dashboard");
-<<<<<<< HEAD
   const [departmentData, setDepartmentData] = useState([]);
   const [employeeData, setEmployeeData] = useState([]);
   const [selectedDate, setSelectedDate] = useState("2025-07-01");
   const [availableDates, setAvailableDates] = useState([]);
   const [search, setSearch] = useState("");
-=======
   const [data, setData] = useState(null);
   const [users, setUsers] = useState([]);
   const [departments, setDepartments] = useState([]);
-  const [search, setSearch] = useState("");
   const [userFilter, setUserFilter] = useState("all");
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
   const [darkMode, setDarkMode] = useState(true);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -88,7 +74,6 @@ const CloudDashboard = () => {
       setError(null);
 
       try {
-<<<<<<< HEAD
         // Get all department and employee usage data
         const [deptResult, empResult] = await Promise.all([
           departmentUsageApi.getAllDepartmentUsage(),
@@ -108,7 +93,7 @@ const CloudDashboard = () => {
           }
         } else {
           setError("Failed to load cloud usage data");
-=======
+        }
         let result;
 
         switch (selectedSection) {
@@ -145,7 +130,6 @@ const CloudDashboard = () => {
           setData(result.data);
         } else {
           setError(result.error || "Failed to load data");
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
         }
       } catch (err) {
         setError("Network error occurred");
@@ -156,15 +140,13 @@ const CloudDashboard = () => {
     };
 
     loadData();
-<<<<<<< HEAD
   }, []);
 
   // Handle budget request approval/rejection (mock function)
-  const handleBudgetAction = async (departmentName, action) => {
+  const handleDepartmentBudgetAction = async (departmentName, action) => {
     console.log(`${action} budget for ${departmentName}`);
     alert(`Budget request for ${departmentName} has been ${action}ed`);
-=======
-  }, [selectedSection]);
+  };
 
   // Handle budget request approval/rejection
   const handleBudgetAction = async (requestId, action) => {
@@ -185,7 +167,6 @@ const CloudDashboard = () => {
     } catch (err) {
       setError("Failed to process budget request");
     }
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
   };
 
   if (loading) {
@@ -221,7 +202,6 @@ const CloudDashboard = () => {
     );
   }
 
-<<<<<<< HEAD
   // Calculate stats based on selected date
   const departmentsByDate = selectedDate 
     ? departmentData.filter(d => d.date === selectedDate) 
@@ -250,14 +230,11 @@ const CloudDashboard = () => {
     };
   });
 
-=======
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
   // Dashboard view
   const dashboardView = (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
-<<<<<<< HEAD
           label="Total Cloud Spend (6 months)"
           value={`$${dashboardStats.totalSpend.toFixed(0)}`}
           change="+15% YoY"
@@ -268,52 +245,28 @@ const CloudDashboard = () => {
         <StatCard
           label="AWS Cost"
           value={`$${dashboardStats.aws.toFixed(0)}`}
-=======
-          label="Total Cloud Spend"
-          value={`$${data?.stats?.totalSpend || 0}`}
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
           change="+12%"
           green
           darkMode={darkMode}
           icon={<TrendingUp size={20} />}
         />
         <StatCard
-<<<<<<< HEAD
           label="Azure Cost"
           value={`$${dashboardStats.azure.toFixed(0)}`}
-=======
-          label="Compute Cost"
-          value={`$${data?.stats?.compute || 0}`}
           change="-5%"
           darkMode={darkMode}
           icon={<TrendingDown size={20} />}
         />
         <StatCard
-          label="Storage Cost"
-          value={`$${data?.stats?.storage || 0}`}
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
-          change="+8%"
-          green
-          darkMode={darkMode}
-          icon={<TrendingUp size={20} />}
-        />
-        <StatCard
-<<<<<<< HEAD
           label="Google Cloud Cost"
           value={`$${dashboardStats.googleCloud.toFixed(0)}`}
           change="+10%"
-=======
-          label="Network Cost"
-          value={`$${data?.stats?.network || 0}`}
-          change="+22%"
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
           green
           darkMode={darkMode}
           icon={<TrendingUp size={20} />}
         />
       </div>
 
-<<<<<<< HEAD
       <div className="mt-8 mb-6">
         <label className="text-sm font-semibold mb-2 block">Select Date:</label>
         <select
@@ -336,13 +289,6 @@ const CloudDashboard = () => {
           <AreaChart data={timelineData}>
             <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? "#ffffff22" : "#00000022"} />
             <XAxis dataKey="date" stroke={darkMode ? "#fff" : "#000"} />
-=======
-      <GlassCard title="Cloud Spend Timeline" darkMode={darkMode} className="mt-8">
-        <ResponsiveContainer width="100%" height={300}>
-          <AreaChart data={data?.chart || []}>
-            <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? "#ffffff22" : "#00000022"} />
-            <XAxis dataKey="month" stroke={darkMode ? "#fff" : "#000"} />
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
             <Tooltip contentStyle={{ background: darkMode ? "#1e293b" : "#fff", border: "none" }} />
             <Area type="monotone" dataKey="spend" stroke="#38bdf8" fill="#0ea5e9" fillOpacity={0.3} />
           </AreaChart>
@@ -350,7 +296,6 @@ const CloudDashboard = () => {
       </GlassCard>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
-<<<<<<< HEAD
         <GlassCard title="Departments by Cloud Spend" darkMode={darkMode}>
           <div className="space-y-4">
             {departmentsByDate
@@ -360,22 +305,12 @@ const CloudDashboard = () => {
                 <div key={d.departmentId} className="flex justify-between items-center">
                   <span className="font-medium">{d.departmentName}</span>
                   <span className="font-semibold text-cyan-400">${d.totalCost.toFixed(0)}</span>
-=======
-        <GlassCard title="Top Expensive Services" darkMode={darkMode}>
-          <div className="space-y-4">
-            {(data?.services || [])
-              .filter((s) => s.name?.toLowerCase().includes(search.toLowerCase()))
-              .map((s) => (
-                <div key={s.name} className="flex justify-between">
-                  <span>{s.name}</span>
-                  <span className="font-semibold text-cyan-400">${s.value}</span>
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
                 </div>
               ))}
           </div>
         </GlassCard>
 
-<<<<<<< HEAD
+
         <GlassCard title="Top Employees by Cost" darkMode={darkMode}>
           <div className="space-y-4">
             {employeesByDate
@@ -406,14 +341,14 @@ const CloudDashboard = () => {
                     </div>
                     <div className="flex gap-2">
                       <button
-                        onClick={() => handleBudgetAction(d.departmentName, 'approve')}
+                        onClick={() => handleDepartmentBudgetAction(d.departmentName, 'approve')}
                         className="p-2 rounded-lg bg-green-500/20 hover:bg-green-500/30 transition"
                         title="Approve"
                       >
                         <CheckCircle size={16} className="text-green-400" />
                       </button>
                       <button
-                        onClick={() => handleBudgetAction(d.departmentName, 'reject')}
+                        onClick={() => handleDepartmentBudgetAction(d.departmentName, 'reject')}
                         className="p-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 transition"
                         title="Reject"
                       >
@@ -422,53 +357,11 @@ const CloudDashboard = () => {
                     </div>
                   </div>
                 ))}
-=======
-        <GlassCard title="Cost Breakdown Radar" darkMode={darkMode}>
-          <ResponsiveContainer width="100%" height={250}>
-            <RadarChart data={data?.radar || []}>
-              <PolarGrid />
-              <PolarAngleAxis dataKey="service" stroke={darkMode ? "#fff" : "#000"} />
-              <PolarRadiusAxis stroke={darkMode ? "#aaa" : "#555"} />
-              <Radar name="Cost" dataKey="value" stroke="#38bdf8" fill="#38bdf8" fillOpacity={0.4} />
-            </RadarChart>
-          </ResponsiveContainer>
-        </GlassCard>
-
-        <RoleBasedUI allowedRoles={['admin', 'manager']}>
-          <GlassCard title="Budget Requests" darkMode={darkMode}>
-            <div className="space-y-4">
-              {[
-                { id: 1, name: "DevOps Team", cost: "$500", status: "pending" },
-                { id: 2, name: "AI Team", cost: "$1200", status: "pending" },
-                { id: 3, name: "Frontend Team", cost: "$300", status: "pending" }
-              ].map((r) => (
-                <div key={r.id} className="flex justify-between items-center p-3 rounded-lg bg-slate-700/30">
-                  <div>
-                    <p className="font-semibold">{r.name}</p>
-                    <p className="text-sm opacity-70">Request: {r.cost}</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => handleBudgetAction(r.id, 'approve')}
-                      className="p-2 rounded-lg bg-green-500/20 hover:bg-green-500/30 transition"
-                      title="Approve"
-                    >
-                      <CheckCircle size={16} className="text-green-400" />
-                    </button>
-                    <button
-                      onClick={() => handleBudgetAction(r.id, 'reject')}
-                      className="p-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 transition"
-                      title="Reject"
-                    >
-                      <XCircle size={16} className="text-red-400" />
-                    </button>
-                  </div>
-                </div>
-              ))}
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
             </div>
           </GlassCard>
         </RoleBasedUI>
+
+        
       </div>
     </>
   );
@@ -476,7 +369,6 @@ const CloudDashboard = () => {
   // Analytics view
   const analyticsView = (
     <>
-<<<<<<< HEAD
       <h2 className="text-2xl font-semibold mb-6">Cloud Cost Analytics</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <GlassCard title="Cloud Provider Comparison" darkMode={darkMode}>
@@ -511,39 +403,16 @@ const CloudDashboard = () => {
                 </div>
               ))}
           </div>
-=======
-      <h2 className="text-2xl font-semibold mb-6">Usage Analytics</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <GlassCard title="Performance Stats" darkMode={darkMode}>
-          <div className="space-y-4">
-            {(data?.usageStats || []).map((s) => (
-              <div key={s.metric} className="flex justify-between py-2">
-                <span>{s.metric}</span>
-                <span className="font-semibold text-cyan-400">{s.value}</span>
-              </div>
-            ))}
-          </div>
-        </GlassCard>
-
-        <GlassCard title="Usage Trends" darkMode={darkMode}>
-          <ResponsiveContainer width="100%" height={200}>
-            <AreaChart data={data?.trendData || []}>
-              <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? "#ffffff22" : "#00000022"} />
-              <XAxis dataKey="date" stroke={darkMode ? "#fff" : "#000"} />
-              <Tooltip contentStyle={{ background: darkMode ? "#1e293b" : "#fff", border: "none" }} />
-              <Area type="monotone" dataKey="value" stroke="#38bdf8" fill="#0ea5e9" fillOpacity={0.3} />
-            </AreaChart>
-          </ResponsiveContainer>
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
         </GlassCard>
       </div>
+
+      
     </>
   );
 
   // Cloud Usage view
   const cloudUsageView = (
     <>
-<<<<<<< HEAD
       <h2 className="text-2xl font-semibold mb-6">Cloud Services Overview</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <GlassCard title="AWS Services" darkMode={darkMode}>
@@ -579,26 +448,12 @@ const CloudDashboard = () => {
           </div>
         </GlassCard>
       </div>
-=======
-      <h2 className="text-2xl font-semibold mb-6">Cloud Usage Overview</h2>
-      <GlassCard title="Service Usage" darkMode={darkMode}>
-        <div className="space-y-4">
-          {(data?.services || []).map((s) => (
-            <div key={s.name} className="flex justify-between py-2">
-              <span>{s.name}</span>
-              <span className="font-semibold text-cyan-400">{s.usage}</span>
-            </div>
-          ))}
-        </div>
-      </GlassCard>
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
     </>
   );
 
   // Settings view
   const settingsView = (
     <>
-<<<<<<< HEAD
       <h2 className="text-2xl font-semibold mb-6">Dashboard Settings</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <GlassCard title="Data Settings" darkMode={darkMode}>
@@ -639,31 +494,6 @@ const CloudDashboard = () => {
                 />
               </button>
             </div>
-=======
-      <h2 className="text-2xl font-semibold mb-6">System Settings</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <GlassCard title="Account Information" darkMode={darkMode}>
-          <div className="space-y-4">
-            {Object.entries(data?.account || {}).map(([key, value]) => (
-              <div key={key} className="flex justify-between py-2">
-                <span className="capitalize">{key.replace(/([A-Z])/g, ' $1')}</span>
-                <span className="font-semibold text-cyan-400">{value?.toString()}</span>
-              </div>
-            ))}
-          </div>
-        </GlassCard>
-
-        <GlassCard title="Notification Settings" darkMode={darkMode}>
-          <div className="space-y-4">
-            {Object.entries(data?.notifications || {}).map(([key, value]) => (
-              <div key={key} className="flex justify-between py-2">
-                <span className="capitalize">{key}</span>
-                <span className={`font-semibold ${value ? "text-green-400" : "text-red-400"}`}>
-                  {value ? "Enabled" : "Disabled"}
-                </span>
-              </div>
-            ))}
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
           </div>
         </GlassCard>
       </div>
@@ -674,7 +504,6 @@ const CloudDashboard = () => {
   const usersView = (
     <>
       <div className="flex justify-between items-center mb-6">
-<<<<<<< HEAD
         <h2 className="text-2xl font-semibold">Employee & Department Overview</h2>
         <div className="flex items-center gap-4">
           <input
@@ -752,134 +581,12 @@ const CloudDashboard = () => {
                     <td className="p-3">{e.department}</td>
                     <td className="p-3 text-cyan-400 font-semibold">${e.totalCost.toFixed(0)}</td>
                     <td className="p-3">{e.totalHours}h</td>
-=======
-        <h2 className="text-2xl font-semibold">User Management</h2>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <Filter size={16} />
-            <select
-              value={userFilter}
-              onChange={(e) => setUserFilter(e.target.value)}
-              className={`px-3 py-2 rounded-xl border backdrop-blur-lg ${
-                darkMode ? "bg-white/10 border-white/20 text-white" : "bg-white border-gray-300 text-black"
-              }`}
-              style={darkMode ? {
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                color: 'white'
-              } : {}}
-            >
-              <option
-                value="all"
-                style={darkMode ? {
-                  backgroundColor: '#1e293b',
-                  color: 'white'
-                } : {}}
-              >
-                All Departments
-              </option>
-              {departments.map(dept => (
-                <option
-                  key={dept.id}
-                  value={dept.name}
-                  style={darkMode ? {
-                    backgroundColor: '#1e293b',
-                    color: 'white'
-                  } : {}}
-                >
-                  {dept.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <button className="flex items-center gap-2 px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-black rounded-xl transition font-medium">
-            <Plus size={16} />
-            Add User
-          </button>
-        </div>
-      </div>
-
-      <GlassCard title="Users" darkMode={darkMode}>
-        <div className="overflow-x-auto">
-          <table className={`w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-md ${darkMode ? "text-white" : "text-black"}`}>
-            <thead>
-              <tr className={`${darkMode ? "bg-gray-700" : "bg-gray-100"}`}>
-                <th className="text-left p-3 border border-gray-300 dark:border-gray-600">Name</th>
-                <th className="text-left p-3 border border-gray-300 dark:border-gray-600">Email</th>
-                <th className="text-left p-3 border border-gray-300 dark:border-gray-600">Department</th>
-                <th className="text-left p-3 border border-gray-300 dark:border-gray-600">Role</th>
-                <th className="text-left p-3 border border-gray-300 dark:border-gray-600">Status</th>
-                <th className="text-left p-3 border border-gray-300 dark:border-gray-600">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users
-                .filter(user => userFilter === "all" || user.department === userFilter)
-                .map((user) => (
-                  <tr key={user.id}>
-                    <td className="p-3 border border-gray-300 dark:border-gray-600">{user.name}</td>
-                    <td className="p-3 border border-gray-300 dark:border-gray-600">{user.email}</td>
-                    <td className="p-3 border border-gray-300 dark:border-gray-600">{user.department}</td>
-                    <td className="p-3 border border-gray-300 dark:border-gray-600">{user.role}</td>
-                    <td className="p-3 border border-gray-300 dark:border-gray-600">
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        user.status === "Active"
-                          ? "bg-green-500/20 text-green-400"
-                          : "bg-red-500/20 text-red-400"
-                      }`}>
-                        {user.status}
-                      </span>
-                    </td>
-                    <td className="p-3 border border-gray-300 dark:border-gray-600">
-                      <div className="flex gap-2">
-                        <button className="p-1 rounded bg-blue-500/20 hover:bg-blue-500/30 transition">
-                          <Edit size={14} className="text-blue-400" />
-                        </button>
-                        <button className="p-1 rounded bg-red-500/20 hover:bg-red-500/30 transition">
-                          <XCircle size={14} className="text-red-400" />
-                        </button>
-                      </div>
-                    </td>
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
                   </tr>
                 ))}
             </tbody>
           </table>
         </div>
       </GlassCard>
-<<<<<<< HEAD
-=======
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-        <GlassCard title="Department Usage" darkMode={darkMode}>
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={data?.departments || []}>
-              <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? "#ffffff22" : "#00000022"} />
-              <XAxis dataKey="name" stroke={darkMode ? "#fff" : "#000"} />
-              <YAxis stroke={darkMode ? "#fff" : "#000"} />
-              <Tooltip contentStyle={{ background: darkMode ? "#1e293b" : "#fff", border: "none" }} />
-              <Bar dataKey="hours" fill="#38bdf8" radius={[4, 4, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-        </GlassCard>
-
-        <GlassCard title="Department Summary" darkMode={darkMode}>
-          <div className="space-y-4">
-            {(data?.departments || []).map((dept) => (
-              <div key={dept.name} className="flex justify-between items-center p-3 rounded-lg bg-slate-700/30">
-                <div>
-                  <p className="font-medium">{dept.name}</p>
-                  <p className="text-sm text-slate-400">{dept.services?.length || 0} services</p>
-                </div>
-                <div className="text-right">
-                  <p className="font-semibold text-cyan-400">{dept.hours}h/day</p>
-                  <p className="text-xs text-slate-400">avg usage</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </GlassCard>
-      </div>
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
     </>
   );
 

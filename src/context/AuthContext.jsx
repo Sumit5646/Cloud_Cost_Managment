@@ -2,7 +2,64 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { isAuthenticated, getCurrentUser, login as authLogin, logout as authLogout, register as authRegister } from '../utils/auth';
-import apiData from '../../jsondata/api.json';
+
+const usersData = [
+  {
+    "id": "user_001",
+    "name": "Admin User",
+    "email": "admin@cloudcost.com",
+    "password": "admin123",
+    "role": "admin",
+    "department": "IT",
+    "phone": "1234567890",
+    "avatar": null,
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "user_002",
+    "name": "Manager User",
+    "email": "manager@cloudcost.com",
+    "password": "manager123",
+    "role": "manager",
+    "department": "DevOps",
+    "phone": "1234567891",
+    "avatar": null,
+    "createdAt": "2025-01-02T00:00:00.000Z"
+  },
+  {
+    "id": "user_003",
+    "name": "Regular User",
+    "email": "user@cloudcost.com",
+    "password": "user123",
+    "role": "user",
+    "department": "Frontend",
+    "phone": "1234567892",
+    "avatar": null,
+    "createdAt": "2025-01-03T00:00:00.000Z"
+  },
+  {
+    "id": "user_004",
+    "name": "John Doe",
+    "email": "john@cloudcost.com",
+    "password": "john123",
+    "role": "user",
+    "department": "AI Team",
+    "phone": "1234567893",
+    "avatar": null,
+    "createdAt": "2024-01-04T00:00:00.000Z"
+  },
+  {
+    "id": "user_005",
+    "name": "Jane Smith",
+    "email": "jane@cloudcost.com",
+    "password": "jane123",
+    "role": "manager",
+    "department": "Marketing",
+    "phone": "1234567894",
+    "avatar": null,
+    "createdAt": "2024-01-05T00:00:00.000Z"
+  }
+];
 
 const AuthContext = createContext(null);
 
@@ -17,7 +74,7 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [users, setUsers] = useState(apiData.users);
+  const [users, setUsers] = useState(usersData);
 
   // Check authentication status on mount
   useEffect(() => {

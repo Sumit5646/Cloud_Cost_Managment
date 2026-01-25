@@ -1,5 +1,5 @@
 {
-<<<<<<< HEAD
+
   "departmentDailyUsage": [
     {
       "date": "2025-07-01",
@@ -602,8 +602,9 @@
       },
       "totalCost": 375,
       "totalHours": 8
-=======
-  "dashboard": {
+    },
+    {
+    "dashboard": {
     "stats": {
       "totalSpend": 12864,
       "compute": 6720,
@@ -686,9 +687,10 @@
       "name": "Marketing",
       "hours": 4,
       "services": ["BigQuery", "Cloud Storage"]
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+      
     }
   ],
+
   "users": [
     {
       "id": "user_001",
@@ -699,12 +701,11 @@
       "department": "IT",
       "phone": "1234567890",
       "avatar": null,
-<<<<<<< HEAD
+
       "createdAt": "2025-01-01T00:00:00.000Z"
-=======
-      "createdAt": "2024-01-01T00:00:00.000Z"
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+
     },
+
     {
       "id": "user_002",
       "name": "Manager User",
@@ -714,12 +715,11 @@
       "department": "DevOps",
       "phone": "1234567891",
       "avatar": null,
-<<<<<<< HEAD
+      
       "createdAt": "2025-01-02T00:00:00.000Z"
-=======
-      "createdAt": "2024-01-02T00:00:00.000Z"
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+    
     },
+    
     {
       "id": "user_003",
       "name": "Regular User",
@@ -729,13 +729,13 @@
       "department": "Frontend",
       "phone": "1234567892",
       "avatar": null,
-<<<<<<< HEAD
+
       "createdAt": "2025-01-03T00:00:00.000Z"
     }
   ]
-=======
-      "createdAt": "2024-01-03T00:00:00.000Z"
+
     },
+
     {
       "id": "user_004",
       "name": "John Doe",
@@ -763,5 +763,5 @@
   "alerts": [],
   "resources": [],
   "activityLogs": []
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+
 }

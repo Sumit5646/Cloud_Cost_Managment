@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # TODO: Add About Section to Landing Page
 
 ## Tasks
@@ -12,7 +11,6 @@
 - About section will describe CloudCost's mission and team
 - Placement: After Benefits, before CTA section
 - Maintain consistent styling with other sections
-=======
 # TODO: Remake Application with Consolidated api.json
 
 ## Step 1: Consolidate Data into api.json
@@ -49,4 +47,3 @@
 - [ ] Test dashboard views
 - [ ] Test CRUD operations in admin dashboard
 - [ ] Verify all components load data correctly
->>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
