@@ -1,0 +1,767 @@
+{
+<<<<<<< HEAD
+  "departmentDailyUsage": [
+    {
+      "date": "2025-07-01",
+      "departmentId": 1,
+      "departmentName": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 450, "services": ["EC2", "RDS", "S3"], "usage": "8 instances" },
+        "Azure": { "cost": 250, "services": ["Virtual Machines", "SQL Database"], "usage": "5 VMs" },
+        "GoogleCloud": { "cost": 300, "services": ["Compute Engine", "Cloud Storage"], "usage": "6 instances" }
+      },
+      "totalCost": 1000,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-07-01",
+      "departmentId": 2,
+      "departmentName": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 600, "services": ["SageMaker", "EC2", "S3"], "usage": "12 GPUs" },
+        "Azure": { "cost": 400, "services": ["Azure ML", "Virtual Machines"], "usage": "8 VMs" },
+        "GoogleCloud": { "cost": 500, "services": ["Vertex AI", "Compute Engine"], "usage": "10 instances" }
+      },
+      "totalCost": 1500,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-07-01",
+      "departmentId": 3,
+      "departmentName": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 200, "services": ["CloudFront", "S3"], "usage": "50GB" },
+        "Azure": { "cost": 150, "services": ["App Service", "Storage"], "usage": "2 instances" },
+        "GoogleCloud": { "cost": 180, "services": ["Cloud CDN", "Cloud Storage"], "usage": "40GB" }
+      },
+      "totalCost": 530,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-07-01",
+      "departmentId": 4,
+      "departmentName": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 150, "services": ["S3", "CloudFront"], "usage": "30GB" },
+        "Azure": { "cost": 100, "services": ["Storage", "CDN"], "usage": "1 instance" },
+        "GoogleCloud": { "cost": 120, "services": ["Cloud Storage", "Cloud CDN"], "usage": "25GB" }
+      },
+      "totalCost": 370,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-08-01",
+      "departmentId": 1,
+      "departmentName": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 480, "services": ["EC2", "RDS", "S3"], "usage": "9 instances" },
+        "Azure": { "cost": 280, "services": ["Virtual Machines", "SQL Database"], "usage": "6 VMs" },
+        "GoogleCloud": { "cost": 340, "services": ["Compute Engine", "Cloud Storage"], "usage": "7 instances" }
+      },
+      "totalCost": 1100,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-08-01",
+      "departmentId": 2,
+      "departmentName": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 650, "services": ["SageMaker", "EC2", "S3"], "usage": "14 GPUs" },
+        "Azure": { "cost": 450, "services": ["Azure ML", "Virtual Machines"], "usage": "9 VMs" },
+        "GoogleCloud": { "cost": 550, "services": ["Vertex AI", "Compute Engine"], "usage": "11 instances" }
+      },
+      "totalCost": 1650,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-08-01",
+      "departmentId": 3,
+      "departmentName": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 220, "services": ["CloudFront", "S3"], "usage": "55GB" },
+        "Azure": { "cost": 170, "services": ["App Service", "Storage"], "usage": "2 instances" },
+        "GoogleCloud": { "cost": 200, "services": ["Cloud CDN", "Cloud Storage"], "usage": "45GB" }
+      },
+      "totalCost": 590,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-08-01",
+      "departmentId": 4,
+      "departmentName": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 180, "services": ["S3", "CloudFront"], "usage": "35GB" },
+        "Azure": { "cost": 120, "services": ["Storage", "CDN"], "usage": "1 instance" },
+        "GoogleCloud": { "cost": 150, "services": ["Cloud Storage", "Cloud CDN"], "usage": "30GB" }
+      },
+      "totalCost": 450,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-09-01",
+      "departmentId": 1,
+      "departmentName": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 520, "services": ["EC2", "RDS", "S3"], "usage": "10 instances" },
+        "Azure": { "cost": 310, "services": ["Virtual Machines", "SQL Database"], "usage": "7 VMs" },
+        "GoogleCloud": { "cost": 380, "services": ["Compute Engine", "Cloud Storage"], "usage": "8 instances" }
+      },
+      "totalCost": 1210,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-09-01",
+      "departmentId": 2,
+      "departmentName": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 700, "services": ["SageMaker", "EC2", "S3"], "usage": "15 GPUs" },
+        "Azure": { "cost": 500, "services": ["Azure ML", "Virtual Machines"], "usage": "10 VMs" },
+        "GoogleCloud": { "cost": 600, "services": ["Vertex AI", "Compute Engine"], "usage": "12 instances" }
+      },
+      "totalCost": 1800,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-09-01",
+      "departmentId": 3,
+      "departmentName": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 250, "services": ["CloudFront", "S3"], "usage": "60GB" },
+        "Azure": { "cost": 190, "services": ["App Service", "Storage"], "usage": "2 instances" },
+        "GoogleCloud": { "cost": 230, "services": ["Cloud CDN", "Cloud Storage"], "usage": "50GB" }
+      },
+      "totalCost": 670,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-09-01",
+      "departmentId": 4,
+      "departmentName": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 200, "services": ["S3", "CloudFront"], "usage": "40GB" },
+        "Azure": { "cost": 140, "services": ["Storage", "CDN"], "usage": "1 instance" },
+        "GoogleCloud": { "cost": 170, "services": ["Cloud Storage", "Cloud CDN"], "usage": "35GB" }
+      },
+      "totalCost": 510,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-10-01",
+      "departmentId": 1,
+      "departmentName": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 560, "services": ["EC2", "RDS", "S3"], "usage": "11 instances" },
+        "Azure": { "cost": 340, "services": ["Virtual Machines", "SQL Database"], "usage": "8 VMs" },
+        "GoogleCloud": { "cost": 420, "services": ["Compute Engine", "Cloud Storage"], "usage": "9 instances" }
+      },
+      "totalCost": 1320,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-10-01",
+      "departmentId": 2,
+      "departmentName": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 750, "services": ["SageMaker", "EC2", "S3"], "usage": "16 GPUs" },
+        "Azure": { "cost": 550, "services": ["Azure ML", "Virtual Machines"], "usage": "11 VMs" },
+        "GoogleCloud": { "cost": 650, "services": ["Vertex AI", "Compute Engine"], "usage": "13 instances" }
+      },
+      "totalCost": 1950,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-10-01",
+      "departmentId": 3,
+      "departmentName": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 280, "services": ["CloudFront", "S3"], "usage": "65GB" },
+        "Azure": { "cost": 210, "services": ["App Service", "Storage"], "usage": "2 instances" },
+        "GoogleCloud": { "cost": 260, "services": ["Cloud CDN", "Cloud Storage"], "usage": "55GB" }
+      },
+      "totalCost": 750,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-10-01",
+      "departmentId": 4,
+      "departmentName": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 230, "services": ["S3", "CloudFront"], "usage": "45GB" },
+        "Azure": { "cost": 160, "services": ["Storage", "CDN"], "usage": "1 instance" },
+        "GoogleCloud": { "cost": 200, "services": ["Cloud Storage", "Cloud CDN"], "usage": "40GB" }
+      },
+      "totalCost": 590,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-11-01",
+      "departmentId": 1,
+      "departmentName": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 600, "services": ["EC2", "RDS", "S3"], "usage": "12 instances" },
+        "Azure": { "cost": 370, "services": ["Virtual Machines", "SQL Database"], "usage": "9 VMs" },
+        "GoogleCloud": { "cost": 460, "services": ["Compute Engine", "Cloud Storage"], "usage": "10 instances" }
+      },
+      "totalCost": 1430,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-11-01",
+      "departmentId": 2,
+      "departmentName": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 800, "services": ["SageMaker", "EC2", "S3"], "usage": "17 GPUs" },
+        "Azure": { "cost": 600, "services": ["Azure ML", "Virtual Machines"], "usage": "12 VMs" },
+        "GoogleCloud": { "cost": 700, "services": ["Vertex AI", "Compute Engine"], "usage": "14 instances" }
+      },
+      "totalCost": 2100,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-11-01",
+      "departmentId": 3,
+      "departmentName": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 310, "services": ["CloudFront", "S3"], "usage": "70GB" },
+        "Azure": { "cost": 230, "services": ["App Service", "Storage"], "usage": "2 instances" },
+        "GoogleCloud": { "cost": 290, "services": ["Cloud CDN", "Cloud Storage"], "usage": "60GB" }
+      },
+      "totalCost": 830,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-11-01",
+      "departmentId": 4,
+      "departmentName": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 260, "services": ["S3", "CloudFront"], "usage": "50GB" },
+        "Azure": { "cost": 180, "services": ["Storage", "CDN"], "usage": "1 instance" },
+        "GoogleCloud": { "cost": 230, "services": ["Cloud Storage", "Cloud CDN"], "usage": "45GB" }
+      },
+      "totalCost": 670,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-12-01",
+      "departmentId": 1,
+      "departmentName": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 650, "services": ["EC2", "RDS", "S3"], "usage": "13 instances" },
+        "Azure": { "cost": 400, "services": ["Virtual Machines", "SQL Database"], "usage": "10 VMs" },
+        "GoogleCloud": { "cost": 500, "services": ["Compute Engine", "Cloud Storage"], "usage": "11 instances" }
+      },
+      "totalCost": 1550,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-12-01",
+      "departmentId": 2,
+      "departmentName": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 850, "services": ["SageMaker", "EC2", "S3"], "usage": "18 GPUs" },
+        "Azure": { "cost": 650, "services": ["Azure ML", "Virtual Machines"], "usage": "13 VMs" },
+        "GoogleCloud": { "cost": 750, "services": ["Vertex AI", "Compute Engine"], "usage": "15 instances" }
+      },
+      "totalCost": 2250,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-12-01",
+      "departmentId": 3,
+      "departmentName": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 340, "services": ["CloudFront", "S3"], "usage": "75GB" },
+        "Azure": { "cost": 250, "services": ["App Service", "Storage"], "usage": "2 instances" },
+        "GoogleCloud": { "cost": 320, "services": ["Cloud CDN", "Cloud Storage"], "usage": "65GB" }
+      },
+      "totalCost": 910,
+      "totalHours": 24
+    },
+    {
+      "date": "2025-12-01",
+      "departmentId": 4,
+      "departmentName": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 290, "services": ["S3", "CloudFront"], "usage": "55GB" },
+        "Azure": { "cost": 200, "services": ["Storage", "CDN"], "usage": "1 instance" },
+        "GoogleCloud": { "cost": 260, "services": ["Cloud Storage", "Cloud CDN"], "usage": "50GB" }
+      },
+      "totalCost": 750,
+      "totalHours": 24
+    }
+  ],
+  "employeeUsageTracking": [
+    {
+      "date": "2025-07-01",
+      "employeeId": "emp_001",
+      "employeeName": "John Doe",
+      "department": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 225, "usage": "4 instances" },
+        "Azure": { "cost": 125, "usage": "2 VMs" },
+        "GoogleCloud": { "cost": 150, "usage": "3 instances" }
+      },
+      "totalCost": 500,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-07-01",
+      "employeeId": "emp_002",
+      "employeeName": "Sarah Smith",
+      "department": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 300, "usage": "6 GPUs" },
+        "Azure": { "cost": 200, "usage": "4 VMs" },
+        "GoogleCloud": { "cost": 250, "usage": "5 instances" }
+      },
+      "totalCost": 750,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-07-01",
+      "employeeId": "emp_003",
+      "employeeName": "Mike Johnson",
+      "department": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 100, "usage": "25GB" },
+        "Azure": { "cost": 75, "usage": "1 instance" },
+        "GoogleCloud": { "cost": 90, "usage": "20GB" }
+      },
+      "totalCost": 265,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-07-01",
+      "employeeId": "emp_004",
+      "employeeName": "Emma Wilson",
+      "department": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 75, "usage": "15GB" },
+        "Azure": { "cost": 50, "usage": "0.5 instance" },
+        "GoogleCloud": { "cost": 60, "usage": "12GB" }
+      },
+      "totalCost": 185,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-08-01",
+      "employeeId": "emp_001",
+      "employeeName": "John Doe",
+      "department": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 240, "usage": "4.5 instances" },
+        "Azure": { "cost": 140, "usage": "2 VMs" },
+        "GoogleCloud": { "cost": 170, "usage": "3.5 instances" }
+      },
+      "totalCost": 550,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-08-01",
+      "employeeId": "emp_002",
+      "employeeName": "Sarah Smith",
+      "department": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 325, "usage": "7 GPUs" },
+        "Azure": { "cost": 225, "usage": "4.5 VMs" },
+        "GoogleCloud": { "cost": 275, "usage": "5.5 instances" }
+      },
+      "totalCost": 825,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-08-01",
+      "employeeId": "emp_003",
+      "employeeName": "Mike Johnson",
+      "department": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 110, "usage": "27GB" },
+        "Azure": { "cost": 85, "usage": "1 instance" },
+        "GoogleCloud": { "cost": 100, "usage": "22GB" }
+      },
+      "totalCost": 295,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-08-01",
+      "employeeId": "emp_004",
+      "employeeName": "Emma Wilson",
+      "department": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 90, "usage": "17GB" },
+        "Azure": { "cost": 60, "usage": "0.5 instance" },
+        "GoogleCloud": { "cost": 75, "usage": "15GB" }
+      },
+      "totalCost": 225,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-09-01",
+      "employeeId": "emp_001",
+      "employeeName": "John Doe",
+      "department": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 260, "usage": "5 instances" },
+        "Azure": { "cost": 155, "usage": "2.5 VMs" },
+        "GoogleCloud": { "cost": 190, "usage": "4 instances" }
+      },
+      "totalCost": 605,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-09-01",
+      "employeeId": "emp_002",
+      "employeeName": "Sarah Smith",
+      "department": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 350, "usage": "7.5 GPUs" },
+        "Azure": { "cost": 250, "usage": "5 VMs" },
+        "GoogleCloud": { "cost": 300, "usage": "6 instances" }
+      },
+      "totalCost": 900,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-09-01",
+      "employeeId": "emp_003",
+      "employeeName": "Mike Johnson",
+      "department": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 125, "usage": "30GB" },
+        "Azure": { "cost": 95, "usage": "1 instance" },
+        "GoogleCloud": { "cost": 115, "usage": "25GB" }
+      },
+      "totalCost": 335,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-09-01",
+      "employeeId": "emp_004",
+      "employeeName": "Emma Wilson",
+      "department": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 100, "usage": "20GB" },
+        "Azure": { "cost": 70, "usage": "0.5 instance" },
+        "GoogleCloud": { "cost": 85, "usage": "17GB" }
+      },
+      "totalCost": 255,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-10-01",
+      "employeeId": "emp_001",
+      "employeeName": "John Doe",
+      "department": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 280, "usage": "5.5 instances" },
+        "Azure": { "cost": 170, "usage": "2.5 VMs" },
+        "GoogleCloud": { "cost": 210, "usage": "4.5 instances" }
+      },
+      "totalCost": 660,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-10-01",
+      "employeeId": "emp_002",
+      "employeeName": "Sarah Smith",
+      "department": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 375, "usage": "8 GPUs" },
+        "Azure": { "cost": 275, "usage": "5.5 VMs" },
+        "GoogleCloud": { "cost": 325, "usage": "6.5 instances" }
+      },
+      "totalCost": 975,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-10-01",
+      "employeeId": "emp_003",
+      "employeeName": "Mike Johnson",
+      "department": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 140, "usage": "32GB" },
+        "Azure": { "cost": 105, "usage": "1 instance" },
+        "GoogleCloud": { "cost": 130, "usage": "27GB" }
+      },
+      "totalCost": 375,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-10-01",
+      "employeeId": "emp_004",
+      "employeeName": "Emma Wilson",
+      "department": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 115, "usage": "22GB" },
+        "Azure": { "cost": 80, "usage": "0.5 instance" },
+        "GoogleCloud": { "cost": 100, "usage": "20GB" }
+      },
+      "totalCost": 295,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-11-01",
+      "employeeId": "emp_001",
+      "employeeName": "John Doe",
+      "department": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 300, "usage": "6 instances" },
+        "Azure": { "cost": 185, "usage": "3 VMs" },
+        "GoogleCloud": { "cost": 230, "usage": "5 instances" }
+      },
+      "totalCost": 715,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-11-01",
+      "employeeId": "emp_002",
+      "employeeName": "Sarah Smith",
+      "department": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 400, "usage": "8.5 GPUs" },
+        "Azure": { "cost": 300, "usage": "6 VMs" },
+        "GoogleCloud": { "cost": 350, "usage": "7 instances" }
+      },
+      "totalCost": 1050,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-11-01",
+      "employeeId": "emp_003",
+      "employeeName": "Mike Johnson",
+      "department": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 155, "usage": "35GB" },
+        "Azure": { "cost": 115, "usage": "1 instance" },
+        "GoogleCloud": { "cost": 145, "usage": "30GB" }
+      },
+      "totalCost": 415,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-11-01",
+      "employeeId": "emp_004",
+      "employeeName": "Emma Wilson",
+      "department": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 130, "usage": "25GB" },
+        "Azure": { "cost": 90, "usage": "0.5 instance" },
+        "GoogleCloud": { "cost": 115, "usage": "22GB" }
+      },
+      "totalCost": 335,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-12-01",
+      "employeeId": "emp_001",
+      "employeeName": "John Doe",
+      "department": "DevOps",
+      "cloudProviders": {
+        "AWS": { "cost": 325, "usage": "6.5 instances" },
+        "Azure": { "cost": 200, "usage": "3 VMs" },
+        "GoogleCloud": { "cost": 250, "usage": "5.5 instances" }
+      },
+      "totalCost": 775,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-12-01",
+      "employeeId": "emp_002",
+      "employeeName": "Sarah Smith",
+      "department": "AI Team",
+      "cloudProviders": {
+        "AWS": { "cost": 425, "usage": "9 GPUs" },
+        "Azure": { "cost": 325, "usage": "6.5 VMs" },
+        "GoogleCloud": { "cost": 375, "usage": "7.5 instances" }
+      },
+      "totalCost": 1125,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-12-01",
+      "employeeId": "emp_003",
+      "employeeName": "Mike Johnson",
+      "department": "Frontend",
+      "cloudProviders": {
+        "AWS": { "cost": 170, "usage": "37GB" },
+        "Azure": { "cost": 125, "usage": "1 instance" },
+        "GoogleCloud": { "cost": 160, "usage": "32GB" }
+      },
+      "totalCost": 455,
+      "totalHours": 8
+    },
+    {
+      "date": "2025-12-01",
+      "employeeId": "emp_004",
+      "employeeName": "Emma Wilson",
+      "department": "Marketing",
+      "cloudProviders": {
+        "AWS": { "cost": 145, "usage": "27GB" },
+        "Azure": { "cost": 100, "usage": "0.5 instance" },
+        "GoogleCloud": { "cost": 130, "usage": "25GB" }
+      },
+      "totalCost": 375,
+      "totalHours": 8
+=======
+  "dashboard": {
+    "stats": {
+      "totalSpend": 12864,
+      "compute": 6720,
+      "storage": 3765,
+      "network": 2379
+    },
+    "chart": [
+      { "month": "Jan", "spend": 900 },
+      { "month": "Feb", "spend": 1200 },
+      { "month": "Mar", "spend": 1450 },
+      { "month": "Apr", "spend": 1700 },
+      { "month": "May", "spend": 2100 },
+      { "month": "Jun", "spend": 2240 },
+      { "month": "Jul", "spend": 2284 },
+      { "month": "Aug", "spend": 1190 },
+      { "month": "Sep", "spend": 1576 },
+      { "month": "Oct", "spend": 1980 },
+      { "month": "Nov", "spend": 2344 },
+      { "month": "Dec", "spend": 1500 }
+    ],
+    "radar": [
+      { "service": "Compute", "value": 6720 },
+      { "service": "Storage", "value": 3765 },
+      { "service": "Network", "value": 2379 },
+      { "service": "Database", "value": 2000 }
+    ],
+    "services": [
+      { "name": "Compute Engine", "value": 2950 },
+      { "name": "Cloud Storage", "value": 1760 },
+      { "name": "Databases", "value": 1500 },
+      { "name": "BigQuery", "value": 1382 },
+      { "name": "VPC Network", "value": 1190 }
+    ]
+  },
+  "analytics": {
+    "usageStats": [
+      { "metric": "Avg CPU Utilization", "value": "67%" },
+      { "metric": "Peak Load", "value": "91%" },
+      { "metric": "Active Projects", "value": "24" },
+      { "metric": "APIs Called", "value": "46,300" }
+    ],
+    "trendData": [
+      { "date": "2025-11-01", "value": 50 },
+      { "date": "2025-11-02", "value": 100 },
+      { "date": "2025-11-03", "value": 75 }
+    ]
+  },
+  "cloudUsage": {
+    "services": [
+      { "name": "Compute Engine", "usage": "42 VMs" },
+      { "name": "Cloud Storage", "usage": "38 TB" },
+      { "name": "BigQuery", "usage": "12 datasets" }
+    ]
+  },
+  "settings": {
+    "account": { "owner": "Admin", "plan": "Premium", "region": "us-central1" },
+    "notifications": { "email": true, "slack": false, "sms": true }
+  },
+  "departments": [
+    {
+      "id": 1,
+      "name": "DevOps",
+      "hours": 7,
+      "services": ["Compute Engine", "VPC Network", "Cloud Storage"]
+    },
+    {
+      "id": 2,
+      "name": "AI Team",
+      "hours": 9,
+      "services": ["Compute Engine", "BigQuery", "Databases"]
+    },
+    {
+      "id": 3,
+      "name": "Frontend",
+      "hours": 6,
+      "services": ["Cloud Storage", "Databases"]
+    },
+    {
+      "id": 4,
+      "name": "Marketing",
+      "hours": 4,
+      "services": ["BigQuery", "Cloud Storage"]
+>>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+    }
+  ],
+  "users": [
+    {
+      "id": "user_001",
+      "name": "Admin User",
+      "email": "admin@cloudcost.com",
+      "password": "admin123",
+      "role": "admin",
+      "department": "IT",
+      "phone": "1234567890",
+      "avatar": null,
+<<<<<<< HEAD
+      "createdAt": "2025-01-01T00:00:00.000Z"
+=======
+      "createdAt": "2024-01-01T00:00:00.000Z"
+>>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+    },
+    {
+      "id": "user_002",
+      "name": "Manager User",
+      "email": "manager@cloudcost.com",
+      "password": "manager123",
+      "role": "manager",
+      "department": "DevOps",
+      "phone": "1234567891",
+      "avatar": null,
+<<<<<<< HEAD
+      "createdAt": "2025-01-02T00:00:00.000Z"
+=======
+      "createdAt": "2024-01-02T00:00:00.000Z"
+>>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+    },
+    {
+      "id": "user_003",
+      "name": "Regular User",
+      "email": "user@cloudcost.com",
+      "password": "user123",
+      "role": "user",
+      "department": "Frontend",
+      "phone": "1234567892",
+      "avatar": null,
+<<<<<<< HEAD
+      "createdAt": "2025-01-03T00:00:00.000Z"
+    }
+  ]
+=======
+      "createdAt": "2024-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "user_004",
+      "name": "John Doe",
+      "email": "john@cloudcost.com",
+      "password": "john123",
+      "role": "user",
+      "department": "AI Team",
+      "phone": "1234567893",
+      "avatar": null,
+      "createdAt": "2024-01-04T00:00:00.000Z"
+    },
+    {
+      "id": "user_005",
+      "name": "Jane Smith",
+      "email": "jane@cloudcost.com",
+      "password": "jane123",
+      "role": "manager",
+      "department": "Marketing",
+      "phone": "1234567894",
+      "avatar": null,
+      "createdAt": "2024-01-05T00:00:00.000Z"
+    }
+  ],
+  "budgets": [],
+  "alerts": [],
+  "resources": [],
+  "activityLogs": []
+>>>>>>> d46ff063e79b603d63eb020067bed31b3690854d
+}
